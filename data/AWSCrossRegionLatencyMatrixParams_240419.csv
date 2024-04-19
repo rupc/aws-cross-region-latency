@@ -1,0 +1,82 @@
+src,dst,mean,std
+Seoul,Seoul,3.31,1.0400
+Seoul,Sydney,146.99,2.6800
+Seoul,Hong Kong,38.16,0.9800
+Seoul,Tokyo,36.02,1.5950
+Seoul,Frankfurt,235.02,2.8800
+Seoul,N. California,132.62,2.1200
+Seoul,London,248.68,1.4500
+Seoul,Osaka,26.09,1.6350
+Seoul,Singapore,84.45,2.1350
+Sydney,Seoul,145.41,1.8550
+Sydney,Sydney,4.44,1.2600
+Sydney,Hong Kong,136.52,2.4500
+Sydney,Tokyo,111.1,2.6000
+Sydney,Frankfurt,252.35,1.5300
+Sydney,N. California,139.65,1.7100
+Sydney,London,268.97,1.4150
+Sydney,Osaka,119.84,1.5550
+Sydney,Singapore,94.51,1.6950
+Hong Kong,Seoul,38.25,0.5400
+Hong Kong,Sydney,136.01,1.2750
+Hong Kong,Hong Kong,2.28,1.6750
+Hong Kong,Tokyo,55.7,1.6800
+Hong Kong,Frankfurt,200.51,1.6300
+Hong Kong,N. California,156.4,0.3000
+Hong Kong,London,214.79,1.2350
+Hong Kong,Osaka,49.27,0.5550
+Hong Kong,Singapore,44.25,1.7150
+Tokyo,Seoul,35.83,0.6100
+Tokyo,Sydney,109.39,1.9800
+Tokyo,Hong Kong,55.42,0.7050
+Tokyo,Tokyo,2.25,1.5900
+Tokyo,Frankfurt,226.44,1.0900
+Tokyo,N. California,109.15,0.9850
+Tokyo,London,226.67,1.9150
+Tokyo,Osaka,10.67,1.1100
+Tokyo,Singapore,70.63,0.6200
+Frankfurt,Seoul,235.2,2.4750
+Frankfurt,Sydney,250.33,1.9850
+Frankfurt,Hong Kong,199.76,1.4300
+Frankfurt,Tokyo,226.66,1.6200
+Frankfurt,Frankfurt,4.48,1.5900
+Frankfurt,N. California,151.88,0.8100
+Frankfurt,London,18.23,0.6800
+Frankfurt,Osaka,234.47,0.9650
+Frankfurt,Singapore,166.14,3.7500
+N. California,Seoul,132.96,1.5050
+N. California,Sydney,139.08,0.3050
+N. California,Hong Kong,155.91,0.5600
+N. California,Tokyo,108.24,0.6750
+N. California,Frankfurt,151.19,0.5350
+N. California,N. California,2.41,1.7350
+N. California,London,148.23,1.1800
+N. California,Osaka,109.24,0.4700
+N. California,Singapore,170.2,0.7500
+London,Seoul,247.35,1.7550
+London,Sydney,266.26,1.2800
+London,Hong Kong,213.82,1.3400
+London,Tokyo,225.17,1.4200
+London,Frankfurt,18.33,1.0050
+London,N. California,147.48,0.9100
+London,London,3.24,1.2200
+London,Osaka,225.1,0.8000
+London,Singapore,174.37,1.0650
+Osaka,Seoul,24.98,2.2100
+Osaka,Sydney,119.06,0.4550
+Osaka,Hong Kong,49.14,0.3550
+Osaka,Tokyo,9.81,0.7950
+Osaka,Frankfurt,235.35,0.8500
+Osaka,N. California,110.08,0.7700
+Osaka,London,225.44,1.8350
+Osaka,Osaka,2.74,1.3550
+Osaka,Singapore,79.0,0.6300
+Singapore,Seoul,84.92,1.8400
+Singapore,Sydney,94.93,1.3800
+Singapore,Hong Kong,43.35,1.8300
+Singapore,Tokyo,70.58,1.1950
+Singapore,Frankfurt,163.14,2.2700
+Singapore,N. California,170.18,0.5750
+Singapore,London,174.92,1.1250
+Singapore,Osaka,78.86,0.9550
+Singapore,Singapore,4.52,1.3350
