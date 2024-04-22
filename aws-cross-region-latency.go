@@ -1,4 +1,4 @@
-package main
+package aws_cross_region_latency
 
 import (
 	"bufio"
@@ -10,6 +10,15 @@ import (
 	"text/tabwriter"
 )
 
+var (
+	// regionsOrdered is a list of AWS regions in the order
+	regionsOrdered = []string{"Seoul", "Tokyo", "Hong Kong", "Osaka", "Singapore", "Sydney", "Frankfurt", "London", "N. California", "Ireland", "Mumbai", "N. Virginia", "Ohio", "Oregon", "SaoPaulo", "Stockholm", "Paris", "Central", "São Paulo", "Bahrain", "Milan", "Cape Town"}
+)
+
+func GetRegionFromIndex(index int) string {
+	return regionsOrdered[index]
+}
+
 type LatencySimulator struct {
 	mean float64
 	std  float64
@@ -20,7 +29,7 @@ func (l *LatencySimulator) Generate() float64 {
 }
 
 func GetLatencyFunctions(path string) map[string]map[string]*LatencySimulator {
-	FunctionMap, err := loadFunctions("data/AWSCrossRegionLatencyMatrixParams_240419.csv")
+	FunctionMap, err := loadFunctions(path)
 	if err != nil {
 		panic(err)
 	}
@@ -29,7 +38,7 @@ func GetLatencyFunctions(path string) map[string]map[string]*LatencySimulator {
 
 func PrintLatencyMatrix(FunctionMap map[string]map[string]*LatencySimulator) {
 	writer := tabwriter.NewWriter(os.Stdout, 0, 0, 1, ' ', tabwriter.Debug)
-	fmt.Fprintln(writer, "Source\tDestination\tMean\tStd\t") // Header
+	fmt.Fprintln(writer, "Source\tDestination\tMean(ms)\tStd\t") // Header
 
 	for src, destinations := range FunctionMap {
 		for dst, params := range destinations {
@@ -37,19 +46,6 @@ func PrintLatencyMatrix(FunctionMap map[string]map[string]*LatencySimulator) {
 		}
 	}
 	writer.Flush() // Send output to standard output
-}
-
-// FunctionMap stores a map from src to another map from dst to the generation function
-
-func main() {
-	// Initialize the function map
-
-	// Load functions from CSV
-	FunctionMap := GetLatencyFunctions("data/AWSCrossRegionLatencyMatrixParams_240419.csv")
-	PrintLatencyMatrix(FunctionMap)
-
-	fmt.Printf("Simulated Latency from Seoul to Tokyo: %.3f", FunctionMap["Seoul"]["Tokyo"].Generate())
-	fmt.Printf("Simulated Latency from Tokyo to Seoul: %.3f", FunctionMap["Tokyo"]["Seoul"].Generate())
 }
 
 // loadFunctions reads latency parameters from a CSV file and creates functions for each src to dst
