@@ -12,7 +12,7 @@ import (
 
 var (
 	// regionsOrdered is a list of AWS regions in the order
-	regionsOrdered = []string{"Seoul", "Tokyo", "Hong Kong", "Osaka", "Singapore", "Sydney", "Frankfurt", "London", "N. California", "Ireland", "Mumbai", "N. Virginia", "Ohio", "Oregon", "SaoPaulo", "Stockholm", "Paris", "Central", "São Paulo", "Bahrain", "Milan", "Cape Town"}
+	regionsOrdered = []string{"Seoul", "Tokyo", "Hong Kong", "Osaka", "Singapore", "Sydney", "Frankfurt", "London", "N. California", "Ireland", "Mumbai", "N. Virginia", "Ohio", "Oregon", "Stockholm", "Paris", "Central", "São Paulo", "Bahrain", "Milan", "Cape Town"}
 )
 
 func GetRegionFromIndex(index int) string {
@@ -28,24 +28,14 @@ func (l *LatencySimulator) Generate() float64 {
 	return l.mean + rand.NormFloat64()*l.std
 }
 
-func GetLatencyFunctions(path string) map[string]map[string]*LatencySimulator {
-	FunctionMap, err := loadFunctions(path)
+// GetLatencyFunctions inputs filepath aws cross region latency matrixes (e.g., AWSCrossRegionLatencyMatrixParams_240419.csv)
+// returns a latency map accessible by map[src][dst]
+func GetLatencyFunctions(filepath string) map[string]map[string]*LatencySimulator {
+	FunctionMap, err := loadFunctions(filepath)
 	if err != nil {
 		panic(err)
 	}
 	return FunctionMap
-}
-
-func PrintLatencyMatrix(FunctionMap map[string]map[string]*LatencySimulator) {
-	writer := tabwriter.NewWriter(os.Stdout, 0, 0, 1, ' ', tabwriter.Debug)
-	fmt.Fprintln(writer, "Source\tDestination\tMean(ms)\tStd\t") // Header
-
-	for src, destinations := range FunctionMap {
-		for dst, params := range destinations {
-			fmt.Fprintf(writer, "%s\t%s\t%.3f\t%.3f\t\n", src, dst, params.mean, params.std)
-		}
-	}
-	writer.Flush() // Send output to standard output
 }
 
 // loadFunctions reads latency parameters from a CSV file and creates functions for each src to dst
@@ -92,4 +82,16 @@ func makeLatencyFunc(mean, std float64) *LatencySimulator {
 		mean: mean,
 		std:  std,
 	}
+}
+
+func PrintLatencyMatrix(FunctionMap map[string]map[string]*LatencySimulator) {
+	writer := tabwriter.NewWriter(os.Stdout, 0, 0, 1, ' ', tabwriter.Debug)
+	fmt.Fprintln(writer, "Source\tDestination\tMean(ms)\tStd\t") // Header
+
+	for src, destinations := range FunctionMap {
+		for dst, params := range destinations {
+			fmt.Fprintf(writer, "%s\t%s\t%.3f\t%.3f\t\n", src, dst, params.mean, params.std)
+		}
+	}
+	writer.Flush() // Send output to standard output
 }
