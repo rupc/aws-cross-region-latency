@@ -4,4 +4,4 @@ aws cross region latency
 - data from [cloudping](https://www.cloudping.co/)
 
 
-![aws cross region latency](heatmap.png)
+![aws cross region latency](fig.png)
