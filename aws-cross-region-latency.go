@@ -12,25 +12,27 @@ import (
 
 var (
 	// regionsOrdered is a list of AWS regions in the order
-	regionsOrdered = []string{"Seoul", "Tokyo", "Hong Kong", "Osaka", "Singapore", "Sydney", "Frankfurt", "London", "N. California", "Ireland", "Mumbai", "N. Virginia", "Ohio", "Oregon", "Stockholm", "Paris", "Central", "São Paulo", "Bahrain", "Milan", "Cape Town"}
+	regionsOrdered = []string{"Seoul", "Tokyo", "Hong Kong", "Osaka", "Singapore", "Sydney", "Frankfurt", "London", "N. California", "Ireland", "Mumbai", "N. Virginia", "Ohio", "Oregon", "Stockholm", "Paris", "Central", "Bahrain", "Milan", "Cape Town", "São Paulo"}
 )
 
 func GetRegionFromIndex(index int) string {
 	return regionsOrdered[index]
 }
 
-type LatencySimulator struct {
+type LatencyParams struct {
 	mean float64
 	std  float64
 }
 
-func (l *LatencySimulator) Generate() float64 {
+type LatencySimulator map[string]map[string]*LatencyParams
+
+func (l *LatencyParams) Generate() float64 {
 	return l.mean + rand.NormFloat64()*l.std
 }
 
 // GetLatencyFunctions inputs filepath aws cross region latency matrixes (e.g., AWSCrossRegionLatencyMatrixParams_240419.csv)
 // returns a latency map accessible by map[src][dst]
-func GetLatencyFunctions(filepath string) map[string]map[string]*LatencySimulator {
+func GetLatencyFunctions(filepath string) LatencySimulator {
 	FunctionMap, err := loadFunctions(filepath)
 	if err != nil {
 		panic(err)
@@ -39,8 +41,8 @@ func GetLatencyFunctions(filepath string) map[string]map[string]*LatencySimulato
 }
 
 // loadFunctions reads latency parameters from a CSV file and creates functions for each src to dst
-func loadFunctions(filePath string) (map[string]map[string]*LatencySimulator, error) {
-	FunctionMap := make(map[string]map[string]*LatencySimulator)
+func loadFunctions(filePath string) (LatencySimulator, error) {
+	FunctionMap := make(LatencySimulator)
 
 	file, err := os.Open(filePath)
 	if err != nil {
@@ -67,7 +69,7 @@ func loadFunctions(filePath string) (map[string]map[string]*LatencySimulator, er
 
 		// Ensure the src map exists
 		if _, exists := FunctionMap[src]; !exists {
-			FunctionMap[src] = make(map[string]*LatencySimulator)
+			FunctionMap[src] = make(map[string]*LatencyParams)
 		}
 
 		// Create a function for each src to dst pair
@@ -77,14 +79,14 @@ func loadFunctions(filePath string) (map[string]map[string]*LatencySimulator, er
 }
 
 // makeLatencyFunc creates a function to generate latencies for specific mean and std
-func makeLatencyFunc(mean, std float64) *LatencySimulator {
-	return &LatencySimulator{
+func makeLatencyFunc(mean, std float64) *LatencyParams {
+	return &LatencyParams{
 		mean: mean,
 		std:  std,
 	}
 }
 
-func PrintLatencyMatrix(FunctionMap map[string]map[string]*LatencySimulator) {
+func PrintLatencyMatrix(FunctionMap LatencySimulator) {
 	writer := tabwriter.NewWriter(os.Stdout, 0, 0, 1, ' ', tabwriter.Debug)
 	fmt.Fprintln(writer, "Source\tDestination\tMean(ms)\tStd\t") // Header
 
