@@ -16,7 +16,7 @@ Seoul,Oregon,123.0,1.5150
 Seoul,Stockholm,253.06,1.3000
 Seoul,Paris,242.52,1.2950
 Seoul,Central,179.52,1.7900
-Seoul,São Paulo,294.74,2.0250
+Seoul,Milan,225.52,2.2750
 Tokyo,Seoul,35.83,0.6100
 Tokyo,Tokyo,2.25,1.5900
 Tokyo,Hong Kong,55.42,0.7050
@@ -34,7 +34,7 @@ Tokyo,Oregon,98.06,0.9550
 Tokyo,Stockholm,244.97,1.1100
 Tokyo,Paris,234.95,0.9250
 Tokyo,Central,157.12,0.3850
-Tokyo,São Paulo,271.69,1.6250
+Tokyo,Milan,216.81,1.2000
 Hong Kong,Seoul,38.25,0.5400
 Hong Kong,Tokyo,55.7,1.6800
 Hong Kong,Hong Kong,2.28,1.6750
@@ -52,7 +52,7 @@ Hong Kong,Oregon,146.47,0.7550
 Hong Kong,Stockholm,218.89,2.0500
 Hong Kong,Paris,209.17,1.4100
 Hong Kong,Central,203.5,0.5800
-Hong Kong,São Paulo,317.07,1.4800
+Hong Kong,Milan,190.52,1.4700
 Osaka,Seoul,24.98,2.2100
 Osaka,Tokyo,9.81,0.7950
 Osaka,Hong Kong,49.14,0.3550
@@ -70,7 +70,7 @@ Osaka,Oregon,99.75,0.7850
 Osaka,Stockholm,254.37,0.8500
 Osaka,Paris,250.92,0.7750
 Osaka,Central,157.02,0.9350
-Osaka,São Paulo,270.85,1.3650
+Osaka,Milan,226.15,0.9950
 Singapore,Seoul,84.92,1.8400
 Singapore,Tokyo,70.58,1.1950
 Singapore,Hong Kong,43.35,1.8300
@@ -88,7 +88,7 @@ Singapore,Oregon,159.81,1.4600
 Singapore,Stockholm,178.87,1.8350
 Singapore,Paris,167.9,1.1750
 Singapore,Central,218.43,1.2900
-Singapore,São Paulo,332.31,3.2050
+Singapore,Milan,150.02,0.8150
 Sydney,Seoul,145.41,1.8550
 Sydney,Tokyo,111.1,2.6000
 Sydney,Hong Kong,136.52,2.4500
@@ -106,7 +106,7 @@ Sydney,Oregon,141.45,1.1100
 Sydney,Stockholm,269.14,1.8250
 Sydney,Paris,278.01,1.3050
 Sydney,Central,198.37,1.3550
-Sydney,São Paulo,312.02,1.2800
+Sydney,Milan,241.03,1.4250
 Frankfurt,Seoul,235.2,2.4750
 Frankfurt,Tokyo,226.66,1.6200
 Frankfurt,Hong Kong,199.76,1.4300
@@ -124,7 +124,7 @@ Frankfurt,Oregon,143.89,2.8650
 Frankfurt,Stockholm,22.48,0.9800
 Frankfurt,Paris,12.53,1.0500
 Frankfurt,Central,92.44,0.8200
-Frankfurt,São Paulo,204.83,0.5450
+Frankfurt,Milan,12.23,0.6800
 London,Seoul,247.35,1.7550
 London,Tokyo,225.17,1.4200
 London,Hong Kong,213.82,1.3400
@@ -142,7 +142,7 @@ London,Oregon,129.95,1.7400
 London,Stockholm,33.0,0.4200
 London,Paris,10.25,0.5750
 London,Central,78.57,0.3700
-London,São Paulo,185.89,0.4800
+London,Milan,26.8,0.5850
 N. California,Seoul,132.96,1.5050
 N. California,Tokyo,108.24,0.6750
 N. California,Hong Kong,155.91,0.5600
@@ -160,7 +160,7 @@ N. California,Oregon,21.99,0.2150
 N. California,Stockholm,170.0,0.4950
 N. California,Paris,141.7,0.7000
 N. California,Central,79.82,0.4500
-N. California,São Paulo,174.09,0.7500
+N. California,Milan,159.85,0.6100
 Ireland,Seoul,238.38,2.4550
 Ireland,Tokyo,216.32,1.4350
 Ireland,Hong Kong,223.71,1.5050
@@ -178,7 +178,7 @@ Ireland,Oregon,119.09,0.6550
 Ireland,Stockholm,42.54,0.5750
 Ireland,Paris,19.19,0.9950
 Ireland,Central,69.28,0.5600
-Ireland,São Paulo,177.99,1.2300
+Ireland,Milan,36.05,0.9300
 Mumbai,Seoul,130.17,2.0750
 Mumbai,Tokyo,134.39,2.3050
 Mumbai,Hong Kong,96.81,1.7100
@@ -196,7 +196,7 @@ Mumbai,Oregon,216.38,2.3300
 Mumbai,Stockholm,142.95,1.7250
 Mumbai,Paris,125.18,2.7400
 Mumbai,Central,208.03,2.8700
-Mumbai,São Paulo,318.64,2.6350
+Mumbai,Milan,110.26,1.2950
 N. Virginia,Seoul,196.0,2.2450
 N. Virginia,Tokyo,167.47,1.2800
 N. Virginia,Hong Kong,218.54,0.6950
@@ -214,7 +214,7 @@ N. Virginia,Oregon,64.76,2.4000
 N. Virginia,Stockholm,111.68,0.9150
 N. Virginia,Paris,83.29,0.4800
 N. Virginia,Central,16.26,1.1600
-N. Virginia,São Paulo,115.81,1.6400
+N. Virginia,Milan,101.63,0.4400
 Ohio,Seoul,169.92,2.0250
 Ohio,Tokyo,148.53,2.9000
 Ohio,Hong Kong,193.39,1.4350
@@ -232,7 +232,7 @@ Ohio,Oregon,51.65,3.0200
 Ohio,Stockholm,120.41,0.4750
 Ohio,Paris,92.3,1.7050
 Ohio,Central,24.71,1.4900
-Ohio,São Paulo,124.17,1.1800
+Ohio,Milan,109.94,0.5250
 Oregon,Seoul,121.66,1.6750
 Oregon,Tokyo,97.53,0.5500
 Oregon,Hong Kong,145.5,0.4450
@@ -250,7 +250,7 @@ Oregon,Oregon,3.54,1.6850
 Oregon,Stockholm,158.35,1.1600
 Oregon,Paris,135.38,1.5800
 Oregon,Central,60.83,0.7850
-Oregon,São Paulo,174.3,0.6000
+Oregon,Milan,151.71,2.2150
 Stockholm,Seoul,253.7,1.7400
 Stockholm,Tokyo,245.26,1.1700
 Stockholm,Hong Kong,218.63,1.7100
@@ -268,7 +268,7 @@ Stockholm,Oregon,158.68,1.7050
 Stockholm,Stockholm,3.34,1.6200
 Stockholm,Paris,30.52,0.2300
 Stockholm,Central,107.94,0.6850
-Stockholm,São Paulo,217.22,1.3300
+Stockholm,Milan,31.06,0.4050
 Paris,Seoul,242.17,1.7350
 Paris,Tokyo,234.47,0.9450
 Paris,Hong Kong,208.4,1.4450
@@ -286,7 +286,7 @@ Paris,Oregon,135.69,0.5700
 Paris,Stockholm,31.26,0.6850
 Paris,Paris,2.09,0.8800
 Paris,Central,85.37,0.4700
-Paris,São Paulo,195.8,0.6150
+Paris,Milan,20.8,0.5550
 Central,Seoul,180.3,1.7750
 Central,Tokyo,157.95,1.5650
 Central,Hong Kong,203.18,0.4800
@@ -304,22 +304,22 @@ Central,Oregon,60.99,1.1200
 Central,Stockholm,108.43,1.7800
 Central,Paris,84.95,1.6550
 Central,Central,4.22,1.9050
-Central,São Paulo,124.63,0.9450
-São Paulo,Seoul,293.81,3.0650
-São Paulo,Tokyo,272.01,1.3450
-São Paulo,Hong Kong,317.23,1.1400
-São Paulo,Osaka,270.84,1.2950
-São Paulo,Singapore,333.36,1.7500
-São Paulo,Sydney,312.85,1.7050
-São Paulo,Frankfurt,205.45,0.6500
-São Paulo,London,187.79,1.2100
-São Paulo,N. California,174.27,0.4400
-São Paulo,Ireland,178.46,0.9700
-São Paulo,Mumbai,317.3,2.6450
-São Paulo,N. Virginia,115.0,0.7850
-São Paulo,Ohio,124.21,1.1650
-São Paulo,Oregon,174.5,0.8600
-São Paulo,Stockholm,218.41,1.1950
-São Paulo,Paris,196.48,1.1950
-São Paulo,Central,125.53,0.6700
-São Paulo,São Paulo,3.17,1.2550
+Central,Milan,101.19,0.8000
+Milan,Seoul,226.42,1.3400
+Milan,Tokyo,216.63,1.0450
+Milan,Hong Kong,191.74,1.3250
+Milan,Osaka,226.01,0.7650
+Milan,Singapore,150.79,0.8450
+Milan,Sydney,240.94,0.7850
+Milan,Frankfurt,13.29,1.0650
+Milan,London,27.28,0.7750
+Milan,N. California,160.21,0.5350
+Milan,Ireland,35.88,0.7150
+Milan,Mumbai,110.58,1.0950
+Milan,N. Virginia,101.82,0.5900
+Milan,Ohio,110.77,1.4400
+Milan,Oregon,151.66,1.2450
+Milan,Stockholm,31.6,0.5400
+Milan,Paris,20.76,0.4200
+Milan,Central,101.56,0.6900
+Milan,Milan,2.6,1.6500
